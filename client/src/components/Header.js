@@ -25,7 +25,7 @@ const Header = () => {
     const logoutuser = async () => {
         let token = localStorage.getItem("usersdatatoken");
 
-        const res = await fetch("/logout", {
+        const res = await fetch("https://dreamy-beignet-908623.netlify.app/logout", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -42,14 +42,14 @@ const Header = () => {
             console.log("use logout");
             localStorage.removeItem("usersdatatoken");
             setLoginData(false)
-            history("/");
+            history("https://dreamy-beignet-908623.netlify.app/");
         } else {
             console.log("error");
         }
     }
 
     const goDash = () => {
-        history("/dash")
+        history("https://dreamy-beignet-908623.netlify.app/dash")
     }
 
     const goError = () => {
