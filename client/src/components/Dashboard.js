@@ -31,7 +31,7 @@ const Dashboard = () => {
         } else {
             console.log("user verify");
             setLoginData(data)
-            history("/dash");
+            history("https://dreamy-beignet-908623.netlify.app/dash");
         }
     }
 
