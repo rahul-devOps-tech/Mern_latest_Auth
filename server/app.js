@@ -8,15 +8,15 @@ const cookiParser = require("cookie-parser")
 const port = 8009; 
 
 
-// app.get("/",(req,res)=>{
-//     res.status(201).json("server created") 
-// });
+app.get("/",(req,res)=>{
+    res.status(201).json("server created") 
+});
 
 app.use(express.json());
 app.use(cookiParser());
 app.use(cors(
     {
-        origin: [],
+        origin: ["https://mern-auth-zlsj.onrender.com/"],
         method:[ "GET", "POST"],
         credentials: true
     }
