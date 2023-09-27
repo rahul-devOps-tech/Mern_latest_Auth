@@ -14,7 +14,13 @@ const port = 8009;
 
 app.use(express.json());
 app.use(cookiParser());
-app.use(cors());
+app.use(cors(
+    {
+        origin: [],
+        method:[ "GET", "POST"],
+        credentials: true
+    }
+));
 app.use(router);
 
 
