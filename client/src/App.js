@@ -22,7 +22,7 @@ function App() {
   const DashboardValid = async () => {
     let token = localStorage.getItem("usersdatatoken");
 
-    const res = await fetch("/validuser", {
+    const res = await fetch("https://dreamy-beignet-908623.netlify.app/validuser", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -37,7 +37,7 @@ function App() {
     } else {
       console.log("user verify");
       setLoginData(data)
-      history("/dash");
+      history("https://dreamy-beignet-908623.netlify.app/dash");
     }
   }
 
